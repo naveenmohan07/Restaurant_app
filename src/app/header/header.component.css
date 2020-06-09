@@ -1,0 +1,12 @@
+.brand-content{
+    max-height: fit-content;
+}
+.brand{
+    font-family: comic sans ms;
+    font-weight: 200;
+    letter-spacing: -2px;
+    text-shadow: lightcoral 4px 3px 6px;
+}
+.nav-item{
+    padding-left: 20px;
+}

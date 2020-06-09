@@ -1,0 +1,14 @@
+.text{
+    padding: 10%;
+    font-family: comic sans ms;
+    font-size: larger;
+}
+.row{
+    padding-top: 20px;
+}
+b{
+    font-family: comic sans ms;
+}
+.date{
+    float: right;
+}

@@ -1,0 +1,13 @@
+.header-content{
+float: right;
+}
+.fas{
+    color: goldenrod;
+}
+.card{
+    font-family: comic sans ms;
+}
+agm-map {
+    height: 300px;
+    zoom:1;
+}

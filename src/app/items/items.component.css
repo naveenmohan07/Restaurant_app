@@ -1,0 +1,12 @@
+*{
+ height: 40%;   
+}
+.list{
+    overflow-y: scroll;
+    /* height: 40%; */
+    max-height: 35vw;
+}
+.backdrop{
+   border-style: groove;
+   max-height: 35vw;
+}

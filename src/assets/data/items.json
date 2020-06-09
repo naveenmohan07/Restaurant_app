@@ -1,0 +1,27 @@
+[
+    {
+        "id":"1",
+        "name":"Royal Chicken Biriyani",
+        "price":"200",
+        "description":"An dskbclk jcnldjcn lndln q;kwdnpain jlscnljasbncf le dlje dlj",
+        "rating":"4.4",
+        "image-url":"https://www.shutterstock.com/image-photo/burritos-wraps-beef-vegetables-on-black-1088296088"
+
+    },
+    {
+        "id":"2",
+        "name":"Chicken Parotta",
+        "price":"400",
+        "description":"An dskbclk jcnldjcn lndln q;kwdnpain jlscnljasbncf le dlje dlj",
+        "rating":"5.0"
+
+    },
+    {
+        "id":"3",
+        "name":"Chicken 65",
+        "price":"600",
+        "description":"pdmcp dn i ks sk gadk fjdnf sjsf lslf ",
+        "rating":"3.5"
+
+    }
+]

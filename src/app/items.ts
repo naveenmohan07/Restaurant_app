@@ -1,0 +1,20 @@
+export class Items {
+    id:number;
+    name:string;
+    description:string;
+    price:number;
+    rating:number;
+    image:string;
+    total:number;
+    qty:number;
+    constructor(id,name,description,price,rating,imageurl,total=0,qty=0){
+        this.id=id;
+        this.name=name;
+        this.description=description;
+        this.price=price;
+        this.rating=rating;
+        this.total=total;
+        this.qty=qty;
+        this.image=imageurl
+     }
+}

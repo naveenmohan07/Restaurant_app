@@ -1,0 +1,15 @@
+<div class="container">
+    <a (click)="addtocart()"><div class="card">
+        <div class="card-header" >
+            <img [src]="[itemslist.image]" height="20px" width="20px" />
+            <h4> {{ itemslist.name }}</h4>
+        </div>
+        <div class="card-body">
+            <p class="items">Price <strong>{{ itemslist.price | currency:'INR' }}</strong></p>
+            <p class="items">Description {{ itemslist.description }}</p>
+        </div>
+        <hr>
+        <p class=" item_rating">Rating{{ itemslist.rating }}</p>
+        <!-- <button class="btn btn-primary" (click)="addtocart()" ></button> -->
+    </div></a>
+</div>

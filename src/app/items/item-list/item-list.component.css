@@ -1,0 +1,17 @@
+.card{
+    margin-bottom: 20px;
+    /* width: 480px; */
+}
+a:visited{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color: red;
+    text-decoration: none;
+    /* box-shadow: darkcyan; */
+}
+.card:hover{
+    border-style: groove;
+    box-shadow: coral;
+}

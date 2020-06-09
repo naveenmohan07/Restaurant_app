@@ -1,0 +1,31 @@
+<div class="card">
+    <div class="card-header">
+        <div class="row justify-content-between">
+            <div class="col-sm-5">
+                <h2 >Your_Cart</h2>
+            </div>
+            <div class="col-auto">
+                <p *ngIf="cartitem.length>0">  Billnumber:{{billno}}</p>  
+            </div>
+        </div>
+        <p class="addtext">Add Your Item to the Cart</p>
+    </div>
+    <div class="card-body">
+        <div class="table">
+            <form #f="ngForm">
+                <p *ngIf="cartitem.length==0">Your Cart is empty</p>
+                <tr *ngFor="let list of cartitem">
+                    <th><p> {{ list.itemname  }}</p></th>
+                       <td><button (click)="sub(list.itemid,list.price)">-</button><input type="text" placeholder="Quantity" value="{{ qty }}"/><button (click)="add(list.itemid,list.price)">+</button></td>
+                    <th><p> Price</p></th>
+                        <td >{{ list.price | currency:'INR'  }}</td>
+                </tr>
+            </form>
+        </div>
+    </div>
+    <div class="card-footer">
+        <app-amount [carttot]="amount"></app-amount>
+        <button class="btn btn-danger" (click)="empty()">Empty</button>
+        <button class="btn btn-success" (click)="pay()">Pay</button>
+    </div>
+</div>

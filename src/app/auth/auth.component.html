@@ -1,0 +1,104 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="left" *ngIf="!signup">
+                <h3 class="text">SignIn</h3><hr>
+                <div class="login">
+                    <form #f="ngForm" (ngSubmit)="Login(f,f.value)">
+                        <div class="inputbox">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <label for="E-mail" class="label">Email: <span class="fas fa-user"></span>
+                                    </label>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group has-search">
+                                            <span class="fas fa-car form-control-feedback"></span> 
+                                    <input type="email" placeholder="Mail-Id" class="form-control" ngModel name="mailid" value="" required email #mailid="ngModel"/>
+                                    </div>
+                                    <span class="help-block" *ngIf="!mailid.valid && mailid.touched">Please Enter valid Mail-id</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <label for="Password" class="label">Password</label>
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="password" placeholder="*****" class="form-control" ngModel name="pass" value="" minlength="6" required #pass="ngModel"/>
+                                    <span class="help-block" *ngIf="!pass.valid && pass.touched">Please Enter valid Password</span>
+                                </div>
+                            </div>
+                            <div class="forget">
+                                <a routerLink="/passwordreset">Forget Password...?? </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-4">
+                                <button class="btn btn-light" [disabled]="!f.valid">Signin</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="rights" *ngIf="signup">
+                <h3 class="text">SignUp</h3>
+                <div class="login">
+                    <form #f="ngForm" (ngSubmit)="Signup(f,f.value)">
+                        <div class="inputbox">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <label for="Username" class="label">Username</label>
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="text" placeholder="Username" class="form-control" ngModel name="username" value="" required #username="ngModel" />
+                                    <span class="help-block" *ngIf="!username.valid && username.touched">Please Enter valid Username</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <label for="E-mail" class="label">Email <span class="fas fa-user"></span>
+                                    </label>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group has-search">
+                                            <span class="fas fa-car form-control-feedback"></span> 
+                                    <input type="email" placeholder="Mail-Id" class="form-control" ngModel name="mailid" value="" required email #email="ngModel" />
+                                    </div>
+                                    <span class="help-block" *ngIf="!email.valid && email.touched">Please Enter valid Mail-id</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <label for="Password" class="label">Password</label>
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="password" placeholder="*****" class="form-control" ngModel name="pass" value="" required #pass="ngModel" />
+                                    <span class="help-block" *ngIf="!pass.valid && pass.touched">Please Enter valid Password</span>
+                                </div>
+                            </div>
+                        </div><br>
+                        <div class="row">
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-4">
+                                <button class="btn btn-light" [disabled]="!f.valid">Signup</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="right">
+                <p class="lead">Welcome,User<br>Create account here..!!!</p>
+                <button class="btn btn-secodary" (click)="Sign()">{{signup? 'SignIn':'SignUp'}} </button>
+            </div>
+        </div>
+    </div>
+    <app-spinner *ngIf="spinner"></app-spinner>
+    <app-alert [error]="err" *ngIf="err" (close)="handleError()"></app-alert>
+    <app-offer *ngIf="offer"></app-offer>
+    <div class="footer">
+        <p>Copyrights</p>
+    </div>
+</div>
